@@ -108,7 +108,8 @@ std::string GlobalManager::managePassphrase() {
 
     std::string passphrase;
     if (passConfirmation) {
-        passphrase = confirmStringsMatch("Enter passphrase", "Repeat passphrase", "Do not match");
+        //passphrase = confirmStringsMatch("Enter passphrase", "Repeat passphrase", "Do not match");
+        passphrase = stringPromptSelection.select("Enter passphrase", 0, false, true);
         display.displaySubMessage("Passphrase set", 48, 2000);
     }
     return passphrase;
