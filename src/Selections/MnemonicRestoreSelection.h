@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include "bip39_english.h"
+
 
 using namespace views;
 using namespace inputs;

@@ -31,6 +31,15 @@ std::string MnemonicRestoreSelection::select(size_t index, size_t size) {
         }
     }
 
+   if (word.size() >= 4) {
+        for (int i = 0; i < 2048; i++) {
+            // substr을 사용한 방법
+            if (word.substr(0, 4) == std::string(wordlist[i]).substr(0, 4)) {
+                return std::string(wordlist[i]);  // 완전한 단어 반환
+            }
+        }
+    }
+    
     return word;
 }
 
